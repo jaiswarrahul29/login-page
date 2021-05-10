@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         window.location("./main.html");
     } else {
         // No user is signed in.
-        window.location("./login.html");
+        
     }
 });
 
@@ -129,7 +129,7 @@ function logout() {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
         //alert("signout successfully");
-        window.location.assign("./login.html");
+        window.location.assign("./index.html");
 
     }).catch((error) => {
         // An error happened.
