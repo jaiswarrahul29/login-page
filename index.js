@@ -31,7 +31,7 @@ function login() {
         .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-            window.location.assign("./index.html");
+            window.location.assign("./main.html");
             // ...
         })
         .catch((error) => {
@@ -49,7 +49,7 @@ function signUp() {
         .then((userCredential) => {
             // Signed in 
             var user = userCredential.user;
-            window.location.assign("./index.html");
+            window.location.assign("./main.html");
             // ...
         })
         .catch((error) => {
@@ -76,7 +76,7 @@ function google(){
             var token = credential.accessToken;
             // The signed-in user info.
             var user = result.user;
-            window.location.assign("./index.html");
+            window.location.assign("./main.html");
             // ...
         }).catch((error) => {
             // Handle Errors here.
@@ -103,7 +103,7 @@ function facebook(){
 
             // The signed-in user info.
             var user = result.user;
-            window.location.assign("./index.html");
+            window.location.assign("./main.html");
 
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             var accessToken = credential.accessToken;
