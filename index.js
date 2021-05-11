@@ -71,8 +71,6 @@ function signUp() {
 function google(){
     var provider = new firebase.auth.GoogleAuthProvider();
 
-    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-
     firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
@@ -85,13 +83,8 @@ function google(){
             var user = result.user;
             // ...
 
-            if (user) {
-                document.getElementById('chat-area').style.display = "block";
-                document.getElementById('login-area').style.display = "none";
-                document.getElementById('signout-btn').style.display = "block";
-
-
-            }
+            document.getElementById('main-content').style.display = "block"
+            document.getElementById('login-content').style.display = "none"
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
